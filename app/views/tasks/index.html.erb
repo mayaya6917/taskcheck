@@ -1,0 +1,24 @@
+<div class ="contents">
+  <div class="contents-left">
+    <% @tasks.each do |task| %>
+      <div class="content_post">
+        <%= task.state %>
+        <span class="name">
+          <%= task.task %>
+        </span>
+        <%= task.limit_date%>
+      </div>
+    <% end %>
+  </div>
+  <div class="contents-right">
+    <% @tasks.each do |task| %>
+      <div class="content_post">
+        <%= task.state %>
+        <span class="name">
+          <%= task.task %>
+        </span>
+        <%= task.limit_date%>
+      </div>
+    <% end %>
+  </div>
+</div>

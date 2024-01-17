@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Taskcheck</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="heading">
+        <h1 class="logo">
+          <%= link_to 'TaskCheck', '/' %></h1>
+      </div>
+      <div class="navbar">
+        <ul class="nav-lists">
+          <li class="nav-lists__list">
+            <%= link_to 'タスクを追加する', '/tasks/new' %></li>
+          <li class="nav-lists__list">
+            <%= link_to '売上を確認する', '/tasks/new' %></li>
+        </ul>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      <p>
+        Copyright TaskCheck 2023.
+      </p>
+    </footer>
+  </body>
+</html>
