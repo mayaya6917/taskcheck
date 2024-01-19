@@ -7,18 +7,11 @@
           <%= task.task %>
         </span>
         <%= task.limit_date%>
+        <%= link_to '削除', task_path(task.id), data: { turbo_method: :delete } %>
       </div>
     <% end %>
   </div>
   <div class="contents-right">
-    <% @tasks.each do |task| %>
-      <div class="content_post">
-        <%= task.state %>
-        <span class="name">
-          <%= task.task %>
-        </span>
-        <%= task.limit_date%>
-      </div>
-    <% end %>
+    <%= pie_chart @date %>
   </div>
 </div>
